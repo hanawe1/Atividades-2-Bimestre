@@ -1,0 +1,56 @@
+public class Animal {
+    private String especie;
+    private int idade;
+
+    public Animal(String especie, int idade) {
+        this.especie = especie;
+        this.idade = idade;
+    }
+    
+    public String getEspecie() {
+        return especie;
+    }
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
+
+//Professor, eu nao consegui colocar juntos, no video aula, o professor criou separados
+public class Mamifero extends Animal {
+    private String alimento;
+
+    public Mamifero(String especie, int idade, String alimento) {
+        super(especie, idade);
+        this.alimento = alimento;
+    }
+    public String getAlimento() {
+        return alimento;
+    }
+
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
+    }
+
+    public void moraNoZoologico() {
+        System.out.println("O mamífero mora no zoológico.");
+    }
+}
+
+// Em outra parte, cria o Main
+public class Main {
+    public static void main(String[] args) {
+
+        Mamifero mamifero = new Mamifero("Cachorro", 5, "Carnes");
+
+        System.out.println("Espécie: " + mamifero.getEspecie());
+        System.out.println("Idade: " + mamifero.getIdade());
+        System.out.println("Alimento: " + mamifero.getAlimento());
+        mamifero.moraNoZoologico();
+    }
+}
