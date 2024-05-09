@@ -1,0 +1,41 @@
+class Animal {
+    protected String especie;
+    public Animal(String especie) {
+        this.especie = especie;
+    }
+    public String getEspecie() {
+        return especie;
+    }
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+}
+class Peixe extends Animal {
+    private String corAzul;
+
+    public Peixe(String especie, String corAzul) {
+        super(especie);
+        this.corAzul = corAzul;
+    }
+    public String getCorAzul() {
+        return corAzul;
+    }
+    public void setCorAzul(String corAzul) {
+        this.corAzul = corAzul;
+    }
+    public String toString() {
+        return "Espécie: " + getEspecie() + ", Cor Azul: " + corAzul;
+    }
+}
+
+
+
+
+//cria uma parte separada para'Main'
+
+public class Main {
+    public static void main(String[] args) {
+        Peixe peixe = new Peixe("Tubarão", "Azul Escuro");
+        System.out.println(peixe);
+    }
+}
