@@ -1,0 +1,38 @@
+class Cabelo {
+    protected String modelo;
+    public Cabelo(String modelo) {
+        this.modelo = modelo;
+    }
+    public String getModelo() {
+        return modelo;
+    }
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+}
+class Curto extends Cabelo {
+    private String corAzul;
+
+    public Curto(String modelo, String corAzul) {
+        super(modelo);
+        this.corAzul = corAzul;
+    }
+    public String getCorAzul() {
+        return corAzul;
+    }
+    public void setCorAzul(String corAzul) {
+        this.corAzul = corAzul;
+    }
+    public String toString() {
+        return "Modelo: " + getModelo() + ", Cor: " + corAzul;
+    }
+}
+
+//criar outra parte para o main
+
+public class Main {
+    public static void main(String[] args) {
+        Curto curto = new Curto("Corte de Camadas ", "ruivo");
+        System.out.println(curto);
+    }
+}
